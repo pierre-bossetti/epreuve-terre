@@ -28,10 +28,20 @@ const alphabetArray = [
 ];
 let alphabetText = '';
 const inputLetter = process.argv[2];
+const stringLength = function (stringLength) {
+  let i = 0;
+  for (i = 0; stringLength[i]; i++) {}
+  return i;
+};
 
-for (let i = 0; i < alphabetArray.length; i++) {
+for (let i = 0; alphabetArray[i]; i++) {
   if (inputLetter <= alphabetArray[i]) {
     alphabetText += alphabetArray[i];
   }
 }
-console.log(alphabetText);
+
+if (!inputLetter || stringLength(inputLetter) > 0) {
+  console.log('Saisi une SEULE lettre stp.');
+} else {
+  console.log(alphabetText);
+}
