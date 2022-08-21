@@ -28,7 +28,7 @@ const alphabetArray = [
 ];
 let alphabetText = '';
 
-for (let i = 0; i < alphabetArray.length; i++) {
+for (let i = 0; alphabetArray[i]; i++) {
   alphabetText += alphabetArray[i];
 }
 console.log(alphabetText);
