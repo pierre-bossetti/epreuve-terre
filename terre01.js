@@ -1,4 +1,19 @@
-const fullPath = process.argv[1];
-const filename = fullPath.split(/[\\\/]/).pop();
+var fullPath = process.argv[1];
+let i = 0;
+let string = '';
 
-console.log(filename);
+while (fullPath[i] != '.') {
+  i++;
+}
+
+while (fullPath[i] != '/') {
+  i--;
+}
+i++;
+
+while (fullPath[i]) {
+  string += fullPath[i];
+  i++;
+}
+
+console.log(string);
