@@ -1,16 +1,16 @@
 const inputNumber = process.argv[2];
 const power = process.argv[3];
-let numberSquared = 0;
+let numberPowered = 0;
 
-const square = function (inputNumber, power) {
+const power = function (inputNumber, power) {
   const x = inputNumber;
   let i = 0;
   while (i < power - 1) {
-    numberSquared = inputNumber * x;
-    inputNumber = numberSquared;
+    numberPowered = inputNumber * x;
+    inputNumber = numberPowered;
     i++;
   }
-  return numberSquared;
+  return numberPowered;
 };
 
 if (power < 0) {
@@ -18,5 +18,5 @@ if (power < 0) {
 } else if (inputNumber == 0 && power == 0) {
   console.log(1);
 } else {
-  console.log(square(inputNumber, power));
+  console.log(power(inputNumber, power));
 }
