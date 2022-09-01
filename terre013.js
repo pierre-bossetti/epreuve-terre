@@ -4,7 +4,6 @@ const number3 = process.argv[4] / 1;
 let numbers = [];
 const elements = 3;
 
-console.log(number1, typeof number1);
 //Ajoute le premier chiffre
 for (let i = 0; i < 1; i++) {
   if (number1 < number2 && number1 < number3) {
@@ -51,5 +50,3 @@ if (number1 === number2 && number2 === number3 && number1 === number3) {
 } else {
   console.log(numbers[(elements + 1) / 2 - 1]);
 }
-
-console.log(numbers);
